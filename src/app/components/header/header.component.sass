@@ -1,0 +1,35 @@
+$base-color-white: #fff
+$font-text-shadow: 24px
+$shadow-text: 0.075em 0.08em 0.1em rgba(0, 0, 0, 1)
+$shadow-box: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12)
+$drop-shadow-logo: drop-shadow( 3px 3px 2px rgba(255, 255, 255, 0.7))
+
+header
+    background: rgb(34,193,195)
+    background: linear-gradient(130deg, rgba(34,193,195,1) 0%, rgba(146,190,119,1) 80%, rgba(253,187,45,1) 100%)
+    box-shadow: $shadow-box
+    .menu-flex
+        display: flex
+        justify-content: space-between
+        align-items: center
+        color: $base-color-white
+        font-size: $font-text-shadow
+        text-shadow: $shadow-text
+        flex: 1
+        div
+            padding: 10px 10px
+            border-radius: 0
+            transition: transform 0.5s ease-in-out
+        div:hover
+            transform: scale(1.5)
+        .menu-logo
+            height: 100%
+            width: 80px
+            filter: $drop-shadow-logo
+            display: none
+
+@media (min-width: 768px)
+    header
+        .menu-flex
+            .menu-logo
+                display: block
