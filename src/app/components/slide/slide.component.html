@@ -1,3 +1,28 @@
-<div>
-    <h2>Smoother & sharper shadows with layered box-shadows</h2>
+<div class="main">
+    <div>
+        <ngx-slick-carousel class="carousel" 
+        #slickModal="slick-carousel" 
+        [config]="slideConfig" 
+        (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)"
+        (afterChange)="afterChange($event)"
+        (beforeChange)="beforeChange($event)">
+        <div ngxSlickItem *ngFor="let slide of slidesv" class="slide">
+        <img src="{{ slide.img }}" alt="" width="100%">
+        </div>
+        </ngx-slick-carousel>
+    </div>
+    <div>
+        <ngx-slick-carousel class="carousel" 
+        #slickModal="slick-carousel" 
+        [config]="slideConfig" 
+        (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)"
+        (afterChange)="afterChange($event)"
+        (beforeChange)="beforeChange($event)">
+        <div ngxSlickItem *ngFor="let slide of slidesh" class="slide">
+        <img src="{{ slide.img }}" alt="" width="100%">
+        </div>
+        </ngx-slick-carousel>
+    </div>
 </div>

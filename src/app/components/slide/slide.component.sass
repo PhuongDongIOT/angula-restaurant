@@ -1,14 +1,16 @@
 $shadow-text: 0.075em 0.08em 0.1em rgba(0, 0, 0, 1)
 
-div
+.main
     background-color: rgba(34,193,195,0.8)
     display: flex
     justify-content: center
-    align-items: center
     text-align: center
+    
+    div
+        width: 100%
 
     h2
-        font-size: 44px
+        font-size: 32px
         width: 50%
         margin: 0
         padding: 20px
@@ -17,8 +19,14 @@ div
         text-shadow: $shadow-text
 
 @media (min-width: 768px)
-    div
-        padding: 200px 20px
+    .main
+        height: 700px
+        div:nth-child(1)
+            width: 25%
+        
+        div:nth-child(2)
+            width: 75%
+
         h2
-            font-size: 76px
-                
+            font-size: 42px
+
