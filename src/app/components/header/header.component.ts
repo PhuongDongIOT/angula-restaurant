@@ -9,23 +9,11 @@ import { HttpClient } from '@angular/common/http';
 export class HeaderComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
-  public Url: string = 'http://localhost:1337'
-  public Company: string;
-  public Logo: string;
+  public Company: string = 'Lorems';
+  public Logo: string = '/assets/images/logo.svg';
 
   ngOnInit(): void {
-    this.fetchAll();
-  }
 
-  fetchAll(){
-    this.http.get('http://localhost:1337/header')
-      .subscribe(
-        (response: any) => {
-          this.Company = response.Name;
-          this.Logo = this.Url + response.Logo.url;
-          console.log(response)
-        }
-      )
   }
 
 }

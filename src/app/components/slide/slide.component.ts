@@ -24,8 +24,8 @@ export class SlideComponent implements OnInit {
     {img: "/assets/images/horizontal/simon-berger-twukN12EN7c-unsplash.jpg"}
   ];
   
-  slideConfig = {"slidesToShow": 1, "slidesToScroll": 1};
-  
+  slideConfig = {"slidesToShow": 1, "slidesToScroll": 1, "arrows": false, "vertical": true, "verticalSwiping": true, "verticalScrolling": true};
+  slideConfigSecond = {"slidesToShow": 1, "slidesToScroll": 1, "arrows": false};
   slickInit(e) {
     console.log('slick initialized');
   }

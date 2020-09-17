@@ -5,16 +5,10 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { SearchComponent } from './components/search/search.component';
-import { SlideComponent } from './components/slide/slide.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    SearchComponent,
-    SlideComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
